@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<h1 align="center">ANNA UNIVERSITY FORM</h1>
+<title>Student Registration Form</title>
+<style type="text/css">
+th {
+color: #FFF;
+font-size: 24px;
+font-weight: bold;
+text-align: left;
+}
+body {
+background-image: url("https://cdn2.vectorstock.com/i/1000x1000/61/41/plain-background-with-woman-in-pink-jacket-vector-30436141.jpg");
+font-family:verdana;
+background-repeat: no-repeat;
+background-size:100%
+}
+</style>
+</head>
+<body>
+<form>
+<fieldset>
+<legend>STUDENT REGISTRIATION FORM</legend>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="5">
+<tr>
+<td><strong>Registriation No:</strong></td>
+<td><input type="tel" name="phone" placeholder="12345"pattern="[0-9]{5}"required/></td><br><br>
+</tr>
+<tr>
+<td><strong>First Name:</strong></td>
+<td><input name="name" type="text" placeholder="Enter a First Name" size="35" required/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Last Name:</strong></td>
+<td><input name="name" type="text" placeholder="Enter a Last Name" size="35" required/></td>
+<td>&nbsp;</td>
+</tr><br>
+</tr>
+<tr>
+<td><strong>Date of Birth:</strong></td>
+<td><input type="date"type="number" size="35"placeholder="D.O.B" required/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Sex:</strong></td>
+<td><input type="radio" name="gender" value="male" required>Male
+<input type="radio" name="gender" value="female">Female</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Password:</strong></td>
+<td><input type="Password" name="pw" placeholder="Password" pattern={.8,}></td>
+</tr>
+<tr>
+<td><strong>Email:</strong></td>
+<td><input name="Email" type="email"placeholder="Enter a Valid Email"  size="35" required/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Phone number:</strong></td>
+<td><input type="tel" name="phone" placeholder="1234-67-8901" pattern="[0-9]{11}"required/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Address:</strong></td>
+<td><input name="name2" type="text" size="35"placeholder="Enter Your Address"  required/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>School:</strong></td>
+<td><select id="slct1" name="slct1" onchange= " populate(this.id,'slct2')" >
+<option>Select..</option>
+<option value="Alwin Memorial Public School">Alwin Memorial Public School</option>
+<option value="Balalok Matriculation Hr. Sec. School">Balalok Matriculation Hr. Sec. School</option>
+<option value="Asan Memorial Matriculation & Higher Secondary School"> Asan Memorial Matriculation & Higher Secondary School</option>
+<option value="Greenwood International High School">Greenwood International High School</option>
+<option value="Emerald Heights International School">Emerald Heights International School</option>
+<option value="Shree Swaminarayan Gurukul International School">Shree Swaminarayan Gurukul International School</option>
+<option value="St.Anne's Girls Hr.Sec.School">St.Anne's Girls Hr.Sec.School</option>
+</select></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Department:</strong></td>
+<td><select id="slct2" name="slct2" onchange="populated(this.id,'slct3')">
+<option>Select..</option>
+<option value="Medical">Medical</option>
+<option value="Engineering">Engineering</option>
+<option value="Bsc.Computer Science">Bsc.Computer Science</option>
+<option value="MBA">MBA</option>
+<option value="Pharmacist ">Pharmacist</option>
+<option value="Teacher">Teacher</option>
+<option value="Ph.D">Ph.D</option>
+</select></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><input type="reset" /></td>
+<td><input type="submit" value="Submit" onsubmit= "alert('your details have been submitted!')"/></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</form>
+</fieldset>
+<script src="script.js"></script>
+<script>
+function populate (s1,s2,s3)
+{
+var s1=document.getElementById('slct1');
+var s2=document.getElementById('slct2');
+var s3=document.getElementById('slct3');
+s2.innerHTML = "";
+if(s1.value == "Medicine and Health Sciences")
+{
+var optionArray=["select|Select","nursing|Nursing","clinical medicine|Clinical Medicine","family medicine|Family Medicine","public health|Public Health"];
+}
+else if(s1.value == "Law")
+{
+var optionArray=["select|Select","law|Law"];
+}
+else if(s1.value == "Business and Economics")
+{
+var optionArray=["select|Select","commerce|Commerce","economics|Economics","hospitality & tourism|Hospitality & Tourism"];
+}
+else if(s1.value == "Music and Performing Arts")
+{
+var optionArray=["select|Select","music theory|Music Theory","production|Production"];
+}
+else if(s1.value == "Science,Engineering and Technology")
+{
+var optionArray=["select|Select","computer science & information technology|Computer Science & Information Technology","biological & physical sciences|Biological & Physical Sciences","mathematics & actuarial science|Mathematics & Actuarial Science"];
+}
+else if(s1.value == "Education")
+{
+var optionArray=["select|Select","education|Education","mass communiacation|Mass Communication","theology|Theology",];
+}
+else if(s1.value=="Pharmacy")
+{
+var optionArray=["select|Select","pharmacy|Pharmacy",];
+}
+s3.innerHTML = "";
+if(s1.value == "Medicine and Health Sciences")
+{
+var optionArray=["select|Select","nursing|Nursing","clinical medicine|Clinical Medicine","family medicine|Family Medicine","public health|Public Health"];
+}
+else if(s1.value == "Law")
+{
+var optionArray=["select|Select","law|Law"];
+}
+else if(s1.value == "Business and Economics")
+{
+var optionArray=["select|Select","commerce|Commerce","economics|Economics","hospitality & tourism|Hospitality & Tourism"];
+}
+else if(s1.value == "Music and Performing Arts")
+{
+var optionArray=["select|Select","music theory|Music Theory","production|Production"];
+}
+else if(s1.value == "Science,Engineering and Technology")
+{
+var optionArray=["select|Select","computer science & information technology|Computer Science & Information Technology","biological & physical sciences|Biological & Physical Sciences","mathematics & actuarial science|Mathematics & Actuarial Science"];
+}
+else if(s1.value == "Education")
+{
+var optionArray=["select|Select","education|Education","mass communiacation|Mass Communication","theology|Theology",];
+}
+else if(s1.value=="Pharmacy")
+{
+var optionArray=["select|Select","pharmacy|Pharmacy",];
+}
+for(var option in optionArray)
+{
+var pair = optionArray[option].split("|");
+var newOption = document.createElement("option");
+newOption.value = pair[0];
+newOption.innerHTML = pair[1];
+s2.options.add(newOption);
+}
+}
+function populated(c1,c2)
+{
+var c1=document.getElementById(c1);
+var c2=document.getElementById(c2);
+c2.innerHTML = "";
+if (c1.value == "nursing")
+{
+var optionArray = ["select|Select","bsc nursing|Bsc Nursing","diploma in nursing|Diploma in Nursing"];
+}
+else if (c1.value == "clinical medicine")
+{
+var optionArray = ["select|Select","bsc clinical medicine|Bsc Clinical Medicine","diploma in clinical medicine|Diploma in Clinical Medicine "];
+}
+else if (c1.value == "family medicine")
+{
+var optionArray = ["select|Select","bsc family medicine|Bsc Family Medicine","diploma in family medicine|Diploma in Family Medicine"];
+}
+else if (c1.value == "clinical medicine")
+{
+var optionArray = ["select|Select","bsc public health|Bsc Public Health","diploma in public health|Diploma in Public Health"];
+}
+else if (c1.value == "law")
+{
+var optionArray = ["select|Select","bsc law|Bsc Clinical Law","diploma in law|Diploma in Law"];
+}
+else if (c1.value == "economics")
+{
+var optionArray = ["select|Select","bsc economics|Bsc Economics","diploma in economics|Diploma in Economics"];
+}
+else if (c1.value == "production")
+{
+var optionArray = ["select|Select","bsc production|Bsc Production","diploma in production|Diploma in Production"];
+}
+else if (c1.value == "computer science & information technnology")
+{
+var optionArray = ["select|Select","bsc comp science|Bsc Comp Science","diploma in comp science|Diploma in Comp Science"];
+}
+else if (c1.value == "education")
+{
+var optionArray = ["select|Select","bsc education|Bsc Education","diploma in education|Diploma in education"];
+}
+else if (c1.value == "theology")
+{
+var optionArray = ["select|Select","ba theology |BA Theology","diploma in theology|Diploma in Theology"];
+}
+else if (c1.value == "pharmacy")
+{
+var optionArray = ["select|Select","bsc pharmacy|Bsc Pharmacy","diploma in pharmacy|Diploma in Pharmacy"];
+}
+for(var option in optionArray)
+{
+var pair = optionArray[option].split("|");
+var newOption = document.createElement("option");
+newOption.value = pair[0];
+newOption.innerHTML = pair[1];
+c2.options.add(newOption);
+}
+}
+</script>
+</head
+</html>
